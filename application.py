@@ -17,7 +17,7 @@ def get_comic_data(id_for_url):
 
     r = requests.get(url=URL)
     if r.status_code != 200:
-        return jsonify({"ERROR": "Comic ID not found."})
+        return {"ERROR": "Comic ID should be an integer."}
 
     data = r.json()
     current_data = {
