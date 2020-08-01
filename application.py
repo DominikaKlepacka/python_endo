@@ -37,7 +37,7 @@ def index():
 
 @app.route('/comics/current', methods=['GET'])
 def current_comic():
-    return get_comic_data("current")
+    return jsonify(get_comic_data("current"))
 
 
 @app.route('/comics/<comic_id>', methods=['GET'])
